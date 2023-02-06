@@ -28,7 +28,7 @@ functions:
     handler: src/insertItem.handler
     events:
       - http:
-          path: /api/v1/item
+          path: /api/v1/items
           method: post
   fetchItems:
     handler: src/fetchItems.handler
@@ -40,8 +40,14 @@ functions:
     handler: src/fetchItem.handler
     events:
       - http:
-          path: /api/v1/item
+          path: /api/v1/items/{id}
           method: get
+  updateItem:
+    handler: src/updateItem.handler
+    events:
+      - http:
+          path: /api/v1/{id}
+          method: put
 
 resources:
   Resources:
