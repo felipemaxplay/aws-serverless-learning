@@ -20,7 +20,7 @@ const insertItem = async (event) => {
   await dynamoDb.put({
     TableName: "ItemTableNew",
     Item: newItem,
-  });
+  }).promise();
 
   return {
     statusCode: 201,

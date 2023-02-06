@@ -46,7 +46,7 @@ functions:
     handler: src/updateItem.handler
     events:
       - http:
-          path: /api/v1/{id}
+          path: /api/v1/items/{id}
           method: put
 
 resources:
