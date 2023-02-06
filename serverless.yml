@@ -36,6 +36,12 @@ functions:
       - http:
           path: /api/v1/items
           method: get
+  fetchItem:
+    handler: src/fetchItem.handler
+    events:
+      - http:
+          path: /api/v1/item
+          method: get
 
 resources:
   Resources:
